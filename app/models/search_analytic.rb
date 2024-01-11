@@ -1,0 +1,2 @@
+class SearchAnalytic < ApplicationRecord
+end
