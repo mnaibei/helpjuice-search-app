@@ -1,2 +1,6 @@
 class Log < ApplicationRecord
-end
+    def self.log_search(query, ip_address)
+
+    end
+  end
+  
