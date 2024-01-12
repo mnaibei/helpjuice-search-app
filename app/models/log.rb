@@ -1,6 +1,5 @@
 class Log < ApplicationRecord
-    def self.log_search(query, ip_address)
-
-    end
+    validates :query, presence: true
+    validates :ip_address, presence: true
   end
   
