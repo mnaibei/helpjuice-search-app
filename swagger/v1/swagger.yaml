@@ -1,0 +1,29 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/":
+    get:
+      summary: list logs
+      responses:
+        '200':
+          description: successful
+  "/logs/search":
+    post:
+      summary: search log
+      responses:
+        '200':
+          description: successful
+  "/search_analytics":
+    get:
+      summary: list search_analytics
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

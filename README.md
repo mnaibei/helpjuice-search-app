@@ -60,6 +60,7 @@
 ## 🚀 Live Version <a name="live-demo"></a>
 
 - https://test-helpjuice.onrender.com/
+- https://search-api-2xru.onrender.com/api-docs
 
 <!-- - [Budget App](https://budget-app-mp1a.onrender.com) -->
 
@@ -84,49 +85,32 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/mnaibei/helpjuice-frontend.git
+  git clone https://github.com/mnaibei/helpjuice-backend.git
 ```
-
-<!-- Install Docker and Docker Compose
-
-```sh
-  sudo apt install docker.io
-  sudo apt install docker-compose -->
-
-<!-- ````
 
 To install dependencies, run:
 
-```sh
+````sh
 npm install```
 
-<!-- **Set up the database** <br>
-
+**Set up the database** <br>
 To create the database, run:
 
 ```sh
-docker-compose exec app bash
-````
-
-```sh
 rails db:create
-```
+````
 
 To create the schema, run:
 
 ````sh
 rails db:migrate
-``` -->
-<!--
+```
 ## Usage
 
-To run the project, execute the following command:
-
-Example command:
-
+Api Docs:
 ```sh
-  docker-compose up -d
-```` --> -->
+  http://localhost:3000/api-docs
+```
 
 ## Run tests
 
@@ -184,3 +168,4 @@ Thank you for your support and for being a part of this journey! ❤️
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+````
