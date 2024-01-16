@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root "logs#index"
   post "logs/search", to: "logs#search"
   get "search_analytics", to: "search_analytics#index"
+  get "logs/history", to: "logs#history"
 end
