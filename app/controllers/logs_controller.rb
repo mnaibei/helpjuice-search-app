@@ -61,18 +61,32 @@ class LogsController < ApplicationController
     #     end
     #   end
 
+    # def log_search(search_query, ip_address)
+    #   # Find the latest log with the same IP address
+    #   existing_log = Log.where(ip_address: ip_address).order(created_at: :desc).first
+    
+    #   if existing_log.present? && similar_query?(existing_log.query, search_query)
+    #     # Update the existing log
+    #     existing_log.update(query: search_query, created_at: Time.current)
+    #   else
+    #     # Create a new log
+    #     Log.create(query: search_query, ip_address: ip_address)
+    #   end
+    # end
+
     def log_search(search_query, ip_address)
-      # Find the latest log with the same IP address
+      # Check if a log with the same IP address already exists
       existing_log = Log.where(ip_address: ip_address).order(created_at: :desc).first
     
       if existing_log.present? && similar_query?(existing_log.query, search_query)
         # Update the existing log
-        existing_log.update(query: search_query, created_at: Time.current)
+        existing_log.update(query: search_query, updated_at: Time.current)
       else
         # Create a new log
         Log.create(query: search_query, ip_address: ip_address)
       end
     end
+    
     
       
       def similar_query?(query1, query2)
