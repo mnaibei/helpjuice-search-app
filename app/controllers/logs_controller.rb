@@ -18,11 +18,12 @@ class LogsController < ApplicationController
     end
   
     def history
-    # Get user's IP address
-      ip_address = request.remote_ip
-      # Fetch logs associated with the user's IP address
+      # Get IP address from parameters, or use the incoming IP as a fallback
+      ip_address = params[:ip_address] || request.remote_ip
+
+      # Fetch logs associated with the IP address
       logs = Log.where(ip_address: ip_address).select { |log| query_completed?(log.query) }
-  
+
       render json: { history: logs.map(&:query) }
     end
   
