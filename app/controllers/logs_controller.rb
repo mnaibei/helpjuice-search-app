@@ -38,10 +38,16 @@ class LogsController < ApplicationController
   
     private
   
-    def query_completed?(search_query)
-      search_query.ends_with?("")
-    end
+    # def query_completed?(search_query)
+    #   search_query.ends_with?("")
+    # end
   
+    def query_completed?(search_query)
+      # Check if the search query is different from the previous query
+      search_query != ""
+    end
+
+    
     # def log_search(search_query, ip_address)
     #     # Check if a log with the same IP address already exists
     #     existing_log = Log.where(ip_address: ip_address).order(created_at: :desc).first
